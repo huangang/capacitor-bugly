@@ -47,12 +47,10 @@ Edit your `capacitor.config.json` like below
 ### initCrashReport()
 
 ```typescript
-initCrashReport() => any
+initCrashReport() => Promise<void>
 ```
 
 Manually initializing Bugly
-
-**Returns:** <code>any</code>
 
 --------------------
 
@@ -60,7 +58,7 @@ Manually initializing Bugly
 ### setUserValue(...)
 
 ```typescript
-setUserValue(options: SetUserValueOptions) => any
+setUserValue(options: SetUserValueOptions) => Promise<void>
 ```
 
 Custom Map parameters can save some custom environment information when a crash occurs
@@ -69,15 +67,13 @@ Custom Map parameters can save some custom environment information when a crash 
 | ------------- | ------------------------------------------------------------------- |
 | **`options`** | <code><a href="#setuservalueoptions">SetUserValueOptions</a></code> |
 
-**Returns:** <code>any</code>
-
 --------------------
 
 
 ### setUserSceneTag(...)
 
 ```typescript
-setUserSceneTag(options: SetUserSceneTagOptions) => any
+setUserSceneTag(options: SetUserSceneTagOptions) => Promise<void>
 ```
 
 Custom tags are used to indicate a certain "scene" in the app. When a crash occurs,
@@ -87,8 +83,6 @@ based on the last set label, and the label ID must be greater than 0
 | Param         | Type                                                                      |
 | ------------- | ------------------------------------------------------------------------- |
 | **`options`** | <code><a href="#setuserscenetagoptions">SetUserSceneTagOptions</a></code> |
-
-**Returns:** <code>any</code>
 
 --------------------
 

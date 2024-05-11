@@ -1,0 +1,193 @@
+{
+  "api": {
+    "name": "BuglyPlugin",
+    "slug": "buglyplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "initCrashReport",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Manually initializing Bugly",
+        "complexTypes": [],
+        "slug": "initcrashreport"
+      },
+      {
+        "name": "setUserValue",
+        "signature": "(options: SetUserValueOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "SetUserValueOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Custom Map parameters can save some custom environment information when a crash occurs",
+        "complexTypes": [
+          "SetUserValueOptions"
+        ],
+        "slug": "setuservalue"
+      },
+      {
+        "name": "setUserSceneTag",
+        "signature": "(options: SetUserSceneTagOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "SetUserSceneTagOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Custom tags are used to indicate a certain \"scene\" in the app. When a crash occurs,\nthe \"scene\" where the crash occurs will be displayed,\nbased on the last set label, and the label ID must be greater than 0",
+        "complexTypes": [
+          "SetUserSceneTagOptions"
+        ],
+        "slug": "setuserscenetag"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "SetUserValueOptions",
+      "slug": "setuservalueoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "key",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "SetUserSceneTagOptions",
+      "slug": "setuserscenetagoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "tag",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": [
+    {
+      "name": "Bugly",
+      "slug": "bugly",
+      "properties": [
+        {
+          "name": "autoInit",
+          "tags": [],
+          "docs": "Auto init @default true",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "androidAppId",
+          "tags": [],
+          "docs": "Bugly App ID (Andoid)",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "iOSAppId",
+          "tags": [],
+          "docs": "Bugly App ID (iOS)",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "enableCatchAnrTrace",
+          "tags": [],
+          "docs": "Whether to retrieve the system trace file when setting ANR @default false (Andoid)",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "enableRecordAnrMainStack",
+          "tags": [],
+          "docs": "Set whether to obtain the mainline stack during the ANR process @default true (Andoid)",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "appReportDelay",
+          "tags": [],
+          "docs": "Network synchronization data (millisecond) @default 10000 (Andoid)",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "enableUnexpectedTerminatingDetection",
+          "tags": [],
+          "docs": "Abnormal exit event recording switch @default false (iOS)",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "enableViewControllerTracking",
+          "tags": [],
+          "docs": "Page information recording switch @default true (iOS)",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "enableSymbolicateInProcess",
+          "tags": [],
+          "docs": "In process restore switch @default true (iOS)",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "enableBlockMonitor",
+          "tags": [],
+          "docs": "Stuck monitoring switch @default false (iOS)",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "blockMonitorTimeout",
+          "tags": [],
+          "docs": "Check interval for lag monitoring, in seconds @default 15 (iOS)",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "debug",
+          "tags": [],
+          "docs": "Debug Mode @default false",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        }
+      ],
+      "docs": "These configuration values are available:"
+    }
+  ]
+}
